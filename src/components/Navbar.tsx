@@ -1,8 +1,8 @@
 import React from "react";
 import Menu from "./Menu";
-import Link from "next/link";
+import Link from "../../node_modules/next/link";
+import Image from "../../node_modules/next/image";
 import CartIcon from "./CartIcon";
-import Image from "next/image";
 
 const Navbar = () => {
   const user = false;
@@ -11,12 +11,14 @@ const Navbar = () => {
       {/* LEFT LINKS */}
       <div className="hidden md:flex gap-4 flex-1">
         <Link href="/">Inicio</Link>
-        <Link href="/menu">Menu</Link>
+        <Link href="/menu">Menú</Link>
         <Link href="/">Contacto</Link>
       </div>
       {/* LOGO */}
-      <div className="text-xl md:font-bold flex-1 md:text-center">
-        <Link href="/">Chiltepin</Link>
+      <div className=" flex-1 md:text-center">
+        <Link href="/">
+        <Image src="/chiltepLog2.png" alt="" width={160} height={70} />
+        </Link>
       </div>
       {/* MOBILE MENU */}
       <div className="md:hidden">
@@ -24,9 +26,9 @@ const Navbar = () => {
       </div>
       {/* RIGHT LINKS */}
       <div className="hidden md:flex gap-4 items-center justify-end flex-1">
-        <div className="md:absolute top-3 r-2 lg:static flex items-center gap-2 cursor-pointer bg-orange-300 px-1 rounded-md">
+        <div className="md:absolute top-3 r-2 lg:static flex items-center gap-2 cursor-pointer bg-yellow-300 px-1 rounded-md">
           <Image src="/phone.png" alt="" width={20} height={20} />
-          <span>123 456 78</span>
+          <span>2212705095</span>
         </div>
         {!user ? (
           <Link href="/login">Login</Link>

@@ -1,13 +1,16 @@
-import Link from "next/link";
-import React from "react";
+import React from 'react';
+import Link from '../../node_modules/next/link';
+import Image from '../../node_modules/next/image';
 
 const Footer = () => {
   return (
-    <div className="h-12 md:h-24 p-4 lg:px-20 xl:px-40 text-red-500 flex items-center justify-between">
-      <Link href="/" className="font-bold text-xl">Chiltepin</Link>
-      <p>© TODOS LOS DERECHOS RESERVADOS.</p>
+    <div className='h-12 md:h-24 p-4 lg:p-20 xl:p-40 text-red-500 flex items-center justify-between'>
+        <Link href="/">
+            <Image src="/chiltepLog2.png" alt=""  width={140} height={30} />
+        </Link>
+        <p>2024 &copy; TODOS LOS DERECHOS RESERVADOS</p>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
